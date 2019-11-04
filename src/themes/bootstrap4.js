@@ -4,7 +4,7 @@ export var bootstrap4Theme = AbstractTheme.extend({
   /* Theme config options that allows changing various aspects of the output */
   options: {
     disable_theme_rules: false,
-    input_size: 'normal', // Size of input and select elements. "small", "normal", "large"
+    input_size: 'small', // Size of input and select elements. "small", "normal", "large"
     custom_forms: false, // use twbs custom form stylings
     object_indent: true, // Indent nested object elements (use nested .card layout)
     object_background: 'bg-light', // Bootstrap 4 card background modifier class (https://getbootstrap.com/docs/4.1/getting-started/introduction/)
@@ -21,7 +21,6 @@ export var bootstrap4Theme = AbstractTheme.extend({
     '.je-noindent .card': 'padding: 0; border: 0', // Option: object_indent
 
     // no-js handling of tooltips. Option: tooltip = 'css'
-
     '.je-tooltip:hover::before, .je-tooltip:hover::after': 'display:block;position:absolute;font-size:0.8em;color:#fff',
     '.je-tooltip:hover::before': 'border-radius:0.2em; content:attr(title);background-color:#000; margin-top:-2.5em;padding:0.3em',
 
@@ -308,6 +307,8 @@ export var bootstrap4Theme = AbstractTheme.extend({
   getIndentedPanel: function () {
     var el = document.createElement('div')
     el.classList.add('card', 'card-body', 'mb-3')
+    el.style.paddingTop = '8px'
+    el.style.paddingBottom = '0px'
 
     if (this.options.object_background) {
       el.classList.add(this.options.object_background)
@@ -339,7 +340,7 @@ export var bootstrap4Theme = AbstractTheme.extend({
     // var cardHeader = document.createElement('div')
     // cardHeader.classList.add('card-header')
 
-    var el = document.createElement('h3')
+    var el = document.createElement('h5')
     el.classList.add('card-title')
 
     if (typeof text === 'string') {
@@ -376,7 +377,7 @@ export var bootstrap4Theme = AbstractTheme.extend({
 
   getButton: function (text, icon, title) {
     var el = this._super(text, icon, title)
-    el.classList.add('btn', 'btn-secondary', 'btn-sm')
+    el.classList.add('btn', 'btn-outline-dark', 'btn-sm')
     return el
   },
 

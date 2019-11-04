@@ -20,5 +20,5 @@ export var fontawesome5Iconlib = AbstractIconLib.extend({
     calendar: 'calendar',
     edit_properties: 'list'
   },
-  icon_prefix: 'fas fa-'
+  icon_prefix: 'fa fa-fw fa-'
 })

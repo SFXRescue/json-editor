@@ -1,6 +1,8 @@
 JSON Editor
 ===========
 
+> This fork contains our fix for an issue described in [#610](https://github.com/json-editor/json-editor/issues/610)
+
 [![Build Status](https://travis-ci.org/json-editor/json-editor.svg?branch=master)](https://travis-ci.org/json-editor/json-editor)
 Fork of the inactive [jdorn/json-editor](https://github.com/jdorn/json-editor) using the updated fork [json-editor/json-editor](https://github.com/json-editor/json-editor).
 Some pull requests added from the original repo.
